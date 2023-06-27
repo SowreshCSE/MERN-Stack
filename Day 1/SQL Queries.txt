@@ -1,0 +1,199 @@
+// Databse
+
+use college;
+
+
+// Table Creation
+
+ CREATE TABLE students (
+    ->   ID INT,
+    ->   FirstName VARCHAR(50),
+    ->   LastName VARCHAR(50),
+    ->   Address VARCHAR(100),
+    ->   City VARCHAR(50),
+    ->   Email VARCHAR(100)
+    -> );
+
+
+// Value Insertion
+
+INSERT INTO students (ID, FirstName, LastName, Address, City, Email)
+    -> VALUES
+    ->   (1, 'Sowresh', 'K', 'Sendamangalam', 'Namakkal', 'sowresh.k2021csec@sece.ac.in'),
+    ->   (2, 'Rahul', 'T', 'Gandhipuram', 'Coimbatore', 'rahul.t2021csec@sece.ac.in'),
+    ->   (3, 'Kavin', 'S', 'AnnaNagar', 'Chennai', 'kavin.s2021csec@sece.ac.in'),
+    ->   (4, 'Vijay', 'R', 'Ukkadam', 'Coimbatore', 'vijay.r2021csec@sece.ac.in'),
+    ->   (5, 'Venkatesh', 'G', 'ECR', 'Chennai', 'venkatesh.g2021csec@sece.ac.in'),
+    ->   (6, 'Adthiya', 'K', 'OMR', 'chennai', 'adthiya.k2021csec@sece.ac.in'),
+    ->   (7, 'Arjun', 'A', 'Kinathukadavu', 'Coimbatore', 'arjun.a2021csec@sece.ac.in'),
+    ->   (8, 'Karthi', 'H', 'NGK Nagar', 'Karur', 'karthi.h2021csec@sece.ac.in'),
+    ->   (9, 'Naveen', 'D', 'Golden city', 'Salem', 'navven.d2021csec@sece.ac.in'),
+    ->   (10, 'Mahesh', 'N', 'KKR street', 'coimbatore', 'mahesh.n2021csec@sece.ac.in');
+
+
+// select
+
+select * from students;
++------+-----------+----------+---------------+------------+--------------------------------+
+| ID   | FirstName | LastName | Address       | City       | Email                          |
++------+-----------+----------+---------------+------------+--------------------------------+
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     |
+|    4 | Vijay     | R        | Ukkadam       | Coimbatore | vijay.r2021csec@sece.ac.in     |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   |
+|    7 | Arjun     | A        | Kinathukadavu | Coimbatore | arjun.a2021csec@sece.ac.in     |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    |
+|    9 | Naveen    | D        | Golden city   | Salem      | navven.d2021csec@sece.ac.in    |
+|   10 | Mahesh    | N        | KKR street    | coimbatore | mahesh.n2021csec@sece.ac.in    |
++------+-----------+----------+---------------+------------+--------------------------------+
+
+
+
+// COUNT()
+
+select count(ID) from students;
++-----------+
+| count(ID) |
++-----------+
+|        10 |
++-----------+
+
+// AVG()
+
+ select avg(ID) from students;
++---------+
+| avg(ID) |
++---------+
+|  5.5000 |
++---------+
+
+// SUM()
+
+select sum(ID) from students;
++---------+
+| sum(ID) |
++---------+
+|      55 |
++---------+
+
+
+// Creating Another Table
+
+ CREATE TABLE stud_number (
+    ->   ID INT,
+    ->   phone INT
+    -> );
+
+
+// Inserting values
+
+INSERT INTO stud_number (ID, phone)
+    -> VALUES
+    ->   (1, 94548458),
+    ->   (2, 91558645),
+    ->   (3, 94548485),
+    ->   (5, 95484464),
+    ->   (6, 95454781),
+    ->   (8, 94545441);
+
+// Select
+
+select * from stud_number;
++------+----------+
+| ID   | phone    |
++------+----------+
+|    1 | 94548458 |
+|    2 | 91558645 |
+|    3 | 94548485 |
+|    5 | 95484464 |
+|    6 | 95454781 |
+|    8 | 94545441 |
++------+----------+
+
+
+// Inner Join
+
+ SELECT students.ID, students.FirstName, students.LastName, students.Address, students.City, students.Email, stud_number.phone FROM students INNER JOIN stud_number ON students.ID = stud_number.ID;
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+| ID   | FirstName | LastName | Address       | City       | Email                          | phone    |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   | 94548458 |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     | 91558645 |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     | 94548485 |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in | 95484464 |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   | 95454781 |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    | 94545441 |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+
+
+// Left Join
+
+ SELECT students.ID, students.FirstName, students.LastName, students.Address, students.City, students.Email, stud_number.phone FROM students LEFT JOIN stud_number ON students.ID = stud_number.ID;
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+| ID   | FirstName | LastName | Address       | City       | Email                          | phone    |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   | 94548458 |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     | 91558645 |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     | 94548485 |
+|    4 | Vijay     | R        | Ukkadam       | Coimbatore | vijay.r2021csec@sece.ac.in     |     NULL |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in | 95484464 |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   | 95454781 |
+|    7 | Arjun     | A        | Kinathukadavu | Coimbatore | arjun.a2021csec@sece.ac.in     |     NULL |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    | 94545441 |
+|    9 | Naveen    | D        | Golden city   | Salem      | navven.d2021csec@sece.ac.in    |     NULL |
+|   10 | Mahesh    | N        | KKR street    | coimbatore | mahesh.n2021csec@sece.ac.in    |     NULL |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+
+
+// Right Join
+
+SELECT students.ID, students.FirstName, students.LastName, students.Address, students.City, students.Email, stud_number.phone FROM students RIGHT JOIN stud_number ON students.ID = stud_number.ID;
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+| ID   | FirstName | LastName | Address       | City       | Email                          | phone    |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   | 94548458 |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     | 91558645 |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     | 94548485 |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in | 95484464 |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   | 95454781 |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    | 94545441 |
++------+-----------+----------+---------------+------------+--------------------------------+----------+
+
+// Group By Ascending order
+
+SELECT ID, FirstName, LastName, Address, City, Email FROM students GROUP BY ID, FirstName, LastName, Address, City, Email ORDER BY ID ASC;
++------+-----------+----------+---------------+------------+--------------------------------+
+| ID   | FirstName | LastName | Address       | City       | Email                          |
++------+-----------+----------+---------------+------------+--------------------------------+
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     |
+|    4 | Vijay     | R        | Ukkadam       | Coimbatore | vijay.r2021csec@sece.ac.in     |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   |
+|    7 | Arjun     | A        | Kinathukadavu | Coimbatore | arjun.a2021csec@sece.ac.in     |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    |
+|    9 | Naveen    | D        | Golden city   | Salem      | navven.d2021csec@sece.ac.in    |
+|   10 | Mahesh    | N        | KKR street    | coimbatore | mahesh.n2021csec@sece.ac.in    |
++------+-----------+----------+---------------+------------+--------------------------------+
+
+// Group By Descending order
+
+ SELECT ID, FirstName, LastName, Address, City, Email FROM students GROUP BY ID, FirstName, LastName, Address, City, Email ORDER BY ID DESC;
++------+-----------+----------+---------------+------------+--------------------------------+
+| ID   | FirstName | LastName | Address       | City       | Email                          |
++------+-----------+----------+---------------+------------+--------------------------------+
+|   10 | Mahesh    | N        | KKR street    | coimbatore | mahesh.n2021csec@sece.ac.in    |
+|    9 | Naveen    | D        | Golden city   | Salem      | navven.d2021csec@sece.ac.in    |
+|    8 | Karthi    | H        | NGK Nagar     | Karur      | karthi.h2021csec@sece.ac.in    |
+|    7 | Arjun     | A        | Kinathukadavu | Coimbatore | arjun.a2021csec@sece.ac.in     |
+|    6 | Adthiya   | K        | OMR           | chennai    | adthiya.k2021csec@sece.ac.in   |
+|    5 | Venkatesh | G        | ECR           | Chennai    | venkatesh.g2021csec@sece.ac.in |
+|    4 | Vijay     | R        | Ukkadam       | Coimbatore | vijay.r2021csec@sece.ac.in     |
+|    3 | Kavin     | S        | AnnaNagar     | Chennai    | kavin.s2021csec@sece.ac.in     |
+|    2 | Rahul     | T        | Gandhipuram   | Coimbatore | rahul.t2021csec@sece.ac.in     |
+|    1 | Sowresh   | K        | Sendamangalam | Namakkal   | sowresh.k2021csec@sece.ac.in   |
++------+-----------+----------+---------------+------------+--------------------------------+
+

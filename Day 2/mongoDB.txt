@@ -1,0 +1,271 @@
+db.models.insertMany([
+  {
+    "name": "swift",
+    "model": "DTS",
+    "Rented_user_count": 1,
+    "Mileage": 18,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1300,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "corolla",
+    "model": "SE",
+    "Rented_user_count": 2,
+    "Mileage": 25,
+    "Transmission": "automatic",
+    "Rent": 1500,
+    "Fuel": 1400,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "civic",
+    "model": "EX",
+    "Rented_user_count": 0,
+    "Mileage": 22,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1200,
+    "image_url": "http://sample.com"
+  },
+ 
+  {
+    "name": "accord",
+    "model": "LX",
+    "Rented_user_count": 3,
+    "Mileage": 28,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1300,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "camry",
+    "model": "SE",
+    "Rented_user_count": 2,
+    "Mileage": 26,
+    "Transmission": "automatic",
+    "Rent": 1500,
+    "Fuel": 1400,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "elantra",
+    "model": "Limited",
+    "Rented_user_count": 1,
+    "Mileage": 23,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1200,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "sentra",
+    "model": "SV",
+    "Rented_user_count": 0,
+    "Mileage": 24,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1300,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "altima",
+    "model": "S",
+    "Rented_user_count": 2,
+    "Mileage": 25,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1200,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "sonata",
+    "model": "SE",
+    "Rented_user_count": 1,
+    "Mileage": 22,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1300,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "fusion",
+    "model": "SE",
+    "Rented_user_count": 0,
+    "Mileage": 24,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1400,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "focus",
+    "model": "SEL",
+    "Rented_user_count": 3,
+    "Mileage": 27,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1200,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "mustang",
+    "model": "GT",
+    "Rented_user_count": 2,
+    "Mileage": 18,
+    "Transmission": "automatic",
+    "Rent": 1500,
+    "Fuel": 1300,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "cruze",
+    "model": "LT",
+    "Rented_user_count": 1,
+    "Mileage": 28,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1200,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "malibu",
+    "model": "Premier",
+    "Rented_user_count": 0,
+    "Mileage": 26,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1300,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "equinox",
+    "model": "LS",
+    "Rented_user_count": 2,
+    "Mileage": 25,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1300,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "traverse",
+    "model": "LT",
+    "Rented_user_count": 1,
+    "Mileage": 22,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1200,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "escape",
+    "model": "SE",
+    "Rented_user_count": 0,
+    "Mileage": 24,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1400,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "explorer",
+    "model": "XLT",
+    "Rented_user_count": 3,
+    "Mileage": 27,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1200,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "tucson",
+    "model": "SE",
+    "Rented_user_count": 2,
+    "Mileage": 23,
+    "Transmission": "automatic",
+    "Rent": 1500,
+    "Fuel": 1300,
+    "image_url": "http://example.com"
+  },
+  {
+    "name": "santa fe",
+    "model": "Limited",
+    "Rented_user_count": 1,
+    "Mileage": 22,
+    "Transmission": "automatic",
+    "Rent": 1300,
+    "Fuel": 1200,
+    "image_url": "http://sample.com"
+  },
+  {
+    "name": "silverado",
+    "model": "LT",
+    "Rented_user_count": 0,
+    "Mileage": 18,
+    "Transmission": "automatic",
+    "Rent": 1200,
+    "Fuel": 1300,
+    "image_url": "http://adsasdasd.com"
+  },
+  {
+    "name": "tahoe",
+    "model": "Premier",
+    "Rented_user_count": 2,
+    "Mileage": 16,
+    "Transmission": "automatic",
+    "Rent": 1400,
+    "Fuel": 1300,
+    "image_url": "http://example.com"
+  }
+]);
+
+
+db.models.find({ name: "corolla" });
+
+
+db.models.find({ Mileage: { $gt: 25 } });
+
+
+db.models.updateOne(
+  { name: "swift" },
+  { $set: { Rent: 1400 } }
+);
+
+
+
+db.models.updateMany(
+  { Rented_user_count: { $gt: 1 } },
+  { $inc: { Rent: 100 } }
+);
+
+
+db.models.deleteOne(
+  { name: "civic" }
+);
+
+
+
+db.models.deleteMany(
+  { Rented_user_count: { $eq: 0 } }
+);
+
+
+
+db.models.find().sort({ Mileage: 1 });
+
+
+
+db.models.find().sort({ Mileage: -1 });
+
+
+
+
+
+
+
+
+
+
